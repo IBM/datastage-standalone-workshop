@@ -68,8 +68,6 @@ TODO: insert image
 
 A new tab with the name `Job_1*` opens up where you can now start designing the parallel job.
 
-#### Add the input tables:
-
 * First, drag a ***Connection*** connector to the canvas. In the modal that opens up, select the `DB2WH` connection that was created earlier and click `Next`.
 
 ![Create connection - select connection](images/connection-stage-connection.png)
