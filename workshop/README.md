@@ -34,4 +34,13 @@ Provides data profiling and analysis to accurately evaluate the content and stru
 ## Credits
 
 * [Steve Martinelli](https://github.com/stevemar)
-* [Sandhya Nayak](https://github.com/snyk)
+* [Sandhya Nayak](https://github.com/sandhya-nayak)
+
+## Additional Resources
+
+* [Video: Postal codes and part numbers (DataStage)](https://www.youtube.com/watch?v=0M7Geb7Vp4ULab)
+* [Video: Calculate employee compensation (read from CSV) (DataStage  and Gov. Catalog)](https://www.youtube.com/watch?v=rOdCiJR52DI)
+* [Video: Banks have merged (DataStage and Gov. Catalog)](https://www.youtube.com/watch?v=QyWdzCeD6cU)
+* [Video: Groceries with Kafka (DataStage)](https://www.youtube.com/watch?v=73w73EtlUAM)
+* [Video: Find relationships between sales, employees, and customers (Information Analyzer)](https://www.youtube.com/watch?v=r121Opaangk)
+* [Video: Clean and analyze data (Governance Catalog)](https://www.youtube.com/watch?v=UGvaNxD0_4E)

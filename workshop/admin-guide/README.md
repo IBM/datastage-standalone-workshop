@@ -1,9 +1,13 @@
 # Admin Guide
 
-This section is comprised of the following steps:
+This section has hints and tips for instructors:
 
-1. [Instructor Step](#1-instructor-step)
+## Provisioning environments
 
-## 1. Instructor Step
+Use <https://bluedemos.com/show/2543> to provision instances of the Skytap environment as needed.
 
-Things specific to instructors can go here.
+* Only IBMers can provision an instance, you'll need to log in with your w3ID.
+* You're limited to one request at a time.
+* You can schedule how long you want to keep the instance live.
+* You'll be emailed a link and a password. Distribute these to the lab attendees.
+* There's no cost to running these instances.
