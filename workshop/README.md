@@ -1,37 +1,23 @@
 
-## Workshop Title
+## Information Server: DataStage and Information Analyzer Workshop
 
-Welcome to our workshop! In this workshop we'll be using foo to accomplish bar. The goals of this workshop are:
+Welcome to our workshop! In this workshop we'll be using IBM Information Server to design data processing jobs with DataStage and to analyze relationships in data using Information Analyzer.
 
-* Goals!
+* Get acquinted with Information Server
+* Run a few DataStage jobs
+* Learn the ins and outs of Information Analyzer
 * Have fun!
-
-### About this workshop
-
-The introductory page of the workshop is broken down into the following sections:
-
-* [Agenda](#agenda)
-* [Compatibility](#compatibility)
-* [Technology Used](#technology-used)
-* [Credits](#credits)
 
 ## Agenda
 
 |   |   |
 | - | - |
-| [Exercise 0: Pre-work](pre-work/README.md) | Pre-work for the project |
-| [Exercise 1: Some Exercise](some-exercise/README.md) | Exercise to do the thing |
-
-## Compatibility
-
-This workshop has been tested on the following platforms:
-
-* **osName**: version X, version Y
-
-## Technology Used
-
-* Brief Description
+| [Lab 0: Pre-work](pre-work/README.md) | Spin up your environment |
+| [Lab 1: Intro to DataStage](lab-1/README.md) | Use DataStage to load, transform local data. Use Operation Console to debug jobs |
+| [Lab 2: Information Analyzer](lab-2/README.md) | Use Information Analyzer to find relationships in data |
+| [Lab 3: DataStage with Db2](lab-3/README.md) | Use DataStage to load from databases, perform calculations, and write to file |
 
 ## Credits
 
-* [Full Name](https://github.com/githubid)
+* [Steve Martinelli](https://github.com/stevemar)
+* [Sandhya Nayak](https://github.com/snyk)
