@@ -1,25 +1,33 @@
 # Pre-work
 
-This section is broken up into the following steps:
+This section will explain how to access your environment.
 
-1. [Sign up for IBM Cloud](#1-sign-up-for-ibm-cloud)
-1. [Download or clone the repo](#2-download-or-clone-the-repo)
+## Credentials
 
-## 1. Sign up for IBM Cloud
+|   |   |   |
+| - | - | - |
+| Windows VM | `Administrator` | `inf0Xerver` |
+| Linux VM | `root` | `inf0Xerver` |
+| Information Server | `isadmin` | `inf0Xerver` |
 
-Ensure you have an IBM Cloud ID
+## 1. Turn on your Skytap Environment
 
-![Cloud Sign up](../.gitbook/generic/ibm-cloud-sign-up.png)
+The lab instructors will provide everyone with a set of URLs at the beginning of the lab.
 
-## 2. Download or clone the repo
+Accessing the URL will open a Skytap environment that is password protected.
 
-Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. So let's get that done early on, you'll need [`git`](https://git-scm.com) on your laptop to clone the repository directly, or access to [GitHub.com](https://github.com/) to download the zip file.
+![Password prompt](images/password.png)
 
-To Download, go to the [GitHub repo for this workshop](https://github.com/IBM/workshop-template) and download the archived version of the workshop and extract it on your laptop.
+Typing in the password provided by the lab instructor will give you access to 4 virtual machines. Turn the VMs on by clicking the "Play" button.
 
-Alternately, run the following command:
+![VMs turned off](images/vms-off.png)
 
-```bash
-git clone https://github.com/IBM/workshop-template
-cd workshop-template
-```
+Once the VMs are turned on, click on the tile to access the virtual machine.
+
+![VMs turned on](images/vms-on.png)
+
+Use the toolbar at the top to make the window fullscreen. The "Ctrl-Alt-Del" button can be used to log into Windows environments.
+
+![Windows VM](images/windows-vm.png)
+
+> **NOTE**: The Skytap environment will automatically turn off the VMs if they are not used within two hours. You can simply start them again to resume your work.
