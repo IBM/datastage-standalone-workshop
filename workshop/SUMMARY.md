@@ -8,7 +8,7 @@
 
 * [Pre-work](pre-work/README.md)
 
-### Some Heading
+### Labs
 
 * [Lab 1: Intro to DataStage](lab-1/README.md)
 * [Lab 2: Information Analyzer](lab-2/README.md)
