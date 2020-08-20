@@ -1,11 +1,12 @@
 # Lab 3
 
-As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last). 
+As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last).
 
 **NOTE:**
-```
+
+```ini
 1) The input tables EMP (containing employee data) and DEPT (containing department data) are already loaded in Db2 Warehouse. The connection details are provided in the steps.
-2) Table EMP uses column WORKDEPT and Table DEPT uses column DEPTNO to identify the department number. 
+2) Table EMP uses column WORKDEPT and Table DEPT uses column DEPTNO to identify the department number.
 3) Create the output file in the Project’s directory: \opt\IBM\InformationServer\Server\Projects\Lab3\output.csv.
 4) You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in the previous labs.
 ```
@@ -20,7 +21,7 @@ This lab is comprised of the following steps:
 
 ## 1. Create a Transformation project
 
-* On the IBM DataStage Flow Designer, click on the `Projects` tab and click `+ Create`. In the modal that opens up, type in a name for the project and click `Create`. 
+* On the IBM DataStage Flow Designer, click on the `Projects` tab and click `+ Create`. In the modal that opens up, type in a name for the project and click `Create`.
 
 ![Create project](images/create-project.png)
 
@@ -32,7 +33,6 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 ![Switch project](images/switch-project.png)
 
-
 ## 2. Add DB2 connection
 
 * Click on the `Connections` tab and then click `+ Create` to add a new connection.
@@ -43,7 +43,7 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 TODO: insert connection details and image
 
-```
+```ini
 Name: DB2WH
 Connector type: JDBC
 URL:
@@ -58,7 +58,6 @@ A tile for the new connection will now be displayed in the `Connections` tab.
 TODO: insert image
 
 ![Created connection](images/created-connection.png)
-
 
 ## 3. Create the job
 
@@ -91,7 +90,7 @@ A new tab with the name `Job_1*` opens up where you can now start designing the 
 Use a ***Transformer*** stage to perform the following two modifications:
 
 1. Update the output of the `EMP` table by replacing any NULL `MIDINIT` values with `" "`. This is needed for a future step where we will combine the FIRSTNME, MIDINIT and LASTNAME columns to create the FULLNAME of the employee.
-2. Currently, the `EMP` table uses the `WORKDEPT` column to identify the department number whereas the `DEPT` table uses the `DEPTNO` column. Modify the output of the `EMP` table by changing the name of the `WORKDEPT` column to `DEPTNO`. This is needed for a future step where we will ***Join*** the two tables. 
+2. Currently, the `EMP` table uses the `WORKDEPT` column to identify the department number whereas the `DEPT` table uses the `DEPTNO` column. Modify the output of the `EMP` table by changing the name of the `WORKDEPT` column to `DEPTNO`. This is needed for a future step where we will ***Join*** the two tables.
 
 * Drag and drop a ***Transformer*** stage next to the ***Connection*** connector for the `EMP` table. Provide the output of the `EMP` table ***Connection*** connector as the input to the ***Transformer*** stage. For this, click on the little blue dot on the right side of the ***Connection*** connector and drag the mouse pointer to the ***Transformer*** stage.
 
@@ -157,7 +156,7 @@ Since the output links have now been added, we can provide the 2 stage variables
 
 ![Transformer - add output columns and constraint](images/transformer-add-output-columns-and-constraint.png)
 
-* Provide the output of the ***Aggregator*** stage as the input to the ***Join*** stage. Double click on the ***Aggregator*** stage to open the stage page. Select `DEPTNAME` as the grouping key. 
+* Provide the output of the ***Aggregator*** stage as the input to the ***Join*** stage. Double click on the ***Aggregator*** stage to open the stage page. Select `DEPTNAME` as the grouping key.
 
 ![Aggregator - 1 - add grouping key](images/aggregator-1-add-grouping-key.png)
 
@@ -169,7 +168,7 @@ Since the output links have now been added, we can provide the 2 stage variables
 
 ![Aggregator - 3 - confirm output columns](images/aggregator-3-confirm-output-columns.png)
 
-* Drag and drop a ***Sort*** stage on the canvas and provide the output of the ***Join stage*** as the input of the ***Sort*** stage. 
+* Drag and drop a ***Sort*** stage on the canvas and provide the output of the ***Join stage*** as the input of the ***Sort*** stage.
 
 ![Add sort stage](images/add-sort-stage.png)
 
@@ -193,7 +192,6 @@ Since the output links have now been added, we can provide the 2 stage variables
 
 ![Update file connector](images/update-file-connector.png)
 
-
 ## 4. Compile and run the job
 
 * Click the `Save` icon to save the job. If you wish to, you can provide a different name for the job imn the modal that pops up. Click `Save`. Once the job is saved, click on the `Compile` icon to compile it. If compilation is successful, you should see a green check mark and the message `Compiled successfully` displayed on the screen.
@@ -203,7 +201,6 @@ Since the output links have now been added, we can provide the 2 stage variables
 * Click the `Run` icon to run the job. In the modal that opens up, click `Run`.
 
 ![Run job](images/run-job.png)
-
 
 ## 5. View output
 

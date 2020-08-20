@@ -27,7 +27,7 @@ IBM InfoSphere Information Server is a market-leading data integration platform 
 
 A highly scalable data-integration tool for designing, developing and running jobs that move and transform data on premises and on the cloud.
 
-![](.gitbook/generic/datastage.png)
+![datastage designer](.gitbook/generic/datastage.png)
 
 ### Information Analyzer
 
