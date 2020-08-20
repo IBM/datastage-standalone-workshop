@@ -10,6 +10,7 @@ This lab is comprised of the following steps:
 1. [Compile and run the job](#4-compile-and-run-the-job)
 1. [Use Operations Console to view previous logs](#5-use-operations-console-to-view-previous-logs)
 1. [View output](#6-view-output)
+1. [Scheduling the job](#7-scheduling-the-job)
 
 ## 1. Create a Transformation project
 
@@ -51,6 +52,31 @@ Zip Integer(6)
 ![Create parallel job](images/create-parallel-job.png)
 
 A new tab with the name `Job_1*` opens up where you can now start designing the parallel job.
+
+Before designing the job, take a few minutes to look at the various buttons and menus available on the screen.
+
+1. The `Show/Hide Palette` button can be used to show or hide the palette on the left of the screen which contains the connectors and stages that can be used while designing the job.
+
+2. The `Save`, `Compile` and `Run` icons are used to save, compile and run the job respectively.
+
+3. The `Compare` icon is used to compare this job with another job in the Project. 
+
+4. The `View` menu has the following options
+
+    1. View OSH code - which is available once the job has been successfully compiled
+    2. View log - which is available once the job has been run
+    3. Properties - based on what is selected in the job canvas before clicking on `Properties`, either the properties of the job or of a connector/stage/link are displayed.
+
+5. The `Schedule` icon is used to set a schedule to run the job.
+
+6. The `Settings` menu has a number of options such as
+
+    1. Apply horizontal layout - which arranges all the connectors and stages in the canvas in a horizontal manner with data flowing from left to right.
+    2. The ability to view/hide annotations, arrows, link names, and the type of the connector/stage.
+    3. Smart palette - which applies smart logic based on usage patterns to reorder the items available in the palette. If disabled, the items in the palette are displayed in an alphabetical order.
+    4. Smart stage suggestions - applies smart logic based on usage patterns to suggest thenext stage that you might want to add to the job.
+
+! [Job options](images/job-options.png)
 
 * Drag a ***File*** connector to the canvas. The `Table Definition Asset Browser` opens up. Select `raviga\ravigaproducts` and click `Next`.
 
@@ -100,9 +126,13 @@ A new tab with the name `Job_1*` opens up where you can now start designing the 
 
 ## 4. Compile and run the job
 
-* Click the `Save` icon to save the job. If you wish to, you can provide a different name for the job in the modal that pops up. Click `Save`. Once the job is saved, click on the `Compile` icon to compile it. If compilation is successful, you should see a green check mark and the message `Compiled successfully` displayed on the screen.
+* Click the `Save` icon to save the job. If you wish to, you can provide a different name for the job in the modal that pops up. Click `Save`. Once the job is saved, click on the `Compile` icon to compile it. If compilation is successful, you should see a green check mark and the message `Compiled successfully` displayed on the screen. The OSH Code will also be available for viewing.
 
 ![Save compile](images/save-compile.png)
+
+If the compilation was not successful, you should see a red error icon and the message `Compiler failed with ### errors.` where ### represeents the number of errors. Clicking on `View errors` brings up a modal that lists all the errors that were found. The stage/connector/link that has the error is also highlighted in the canvas and you can hover over it to see error.
+
+![Save compile error](images/save-compile-error.png)
 
 * Click the `Run` icon to run the job. In the modal that opens up, click `Run`.
 
@@ -134,10 +164,24 @@ A new tab with the name `Job_1*` opens up where you can now start designing the 
 
 * The output file will be saved on the server. Switch to the server VM by clicking the first icon on the `Environment VMs panel` and selecting `iis-server`. Login as the `root` user with the password `inf0Xerver`.
 
-![switch to server VM](images/switch-to-server-vm.png)
+![Switch to server VM](images/switch-to-server-vm.png)
 
 * CD to the location where you had stored the file. If you provided a path starting at "/", then it will be stored at that location in the server. Since we had only provided `output.csv` as the file path in the ***File*** connector, the file will be available in the Transformation project's folder, i.e.,
 
 /opt/IBM/InformationServer/Server/Projects/\<project-name\>/
 
 ![CD to project folder](images/cd-to-project-folder.png)
+
+## 7. Scheduling the job
+
+DataStage Flow Designer provides the ability to run jobs as per a schedule.
+
+*  Back in the DataStage Flow Designer where we were designing the job, click on the `Schedule` icon. In the modal that opens up, provide the frequency for running the job - whether you want to run it every `Day`, `Week ` or `Month`. Next to it, provide the time of the day when the job should run. Click `Schedule`.
+
+![Schedule job](images/schedule.png)
+
+Alternatively you can go up one level to the `Jobs` tab, and hover over your job's tile to see the kebab icon (⋮). Click on the icon and select `Schedule` to open up the scheduling modal where you can set up a schedule for your job.
+
+![Schedule job 2](images/schedule-2.png)
+
+**Note:** You can only schedule your job once it has been successfully compiled.
