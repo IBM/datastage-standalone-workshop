@@ -192,7 +192,7 @@ Since the output links have now been added, we can provide the 2 stage variables
 
 ## 4. Compile and run the job
 
-* Click the `Save` icon to save the job. If you wish to, you can provide a different name for the job imn the modal that pops up. Click `Save`. Once the job is saved, click on the `Compile` icon to compile it. If compilation is successful, you should see a green check mark and the message `Compiled successfully` displayed on the screen.
+* Click the `Save` icon to save the job. If you wish to, you can provide a different name for the job in the modal that pops up. Click `Save`. Once the job is saved, click on the `Compile` icon to compile it. If compilation is successful, you should see a green check mark and the message `Compiled successfully` displayed on the screen.
 
 ![Save compile](images/save-compile.png)
 
