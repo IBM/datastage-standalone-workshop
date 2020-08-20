@@ -2,14 +2,12 @@
 
 As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last).
 
-**NOTE:**
+**Notes:**
 
-```ini
-1) The input tables EMP (containing employee data) and DEPT (containing department data) are already loaded in Db2 Warehouse. The connection details are provided in the steps.
-2) Table EMP uses column WORKDEPT and Table DEPT uses column DEPTNO to identify the department number.
-3) Create the output file in the Project’s directory: \opt\IBM\InformationServer\Server\Projects\Lab3\output.csv.
-4) You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in the previous labs.
-```
+> 1. The input tables: `EMP` (containing employee data) and `DEPT` (containing department data) are already loaded in Db2 Warehouse. The connection details are provided in these steps.
+> 2. Table `EMP` uses column `WORKDEPT` and table `DEPT` uses column `DEPTNO` to identify the department number.
+> 3. We'll create the output file in the following directory: `/opt/IBM/InformationServer/Server/Projects/Lab3/`.
+> 4. You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in the previous lab.
 
 This lab is comprised of the following steps:
 
@@ -47,7 +45,7 @@ TODO: insert connection details and image
 Name: DB2WH
 Connector type: JDBC
 URL:
-Username:
+Username: bluadmin
 Password:
 ```
 
