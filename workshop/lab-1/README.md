@@ -30,10 +30,10 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 We will be using the raviga-products.csv file which was loaded as part of [Lab 0](/workshop/lab-0/README.md#3-copy-the-data-over). This file contains tabular data having 2 columns:
 
-```ini
-ProductID varchar(9)
-Zip Integer(6)
-```
+| Column Name | Data Type |
+| - | - |
+| ProductID | varchar(9) |
+| Zip | Integer(6) |
 
 * On the DataStage Flow Designer, click on the `Table Definitions` tab and then click `+ Create`. In the modal that opens up, provide the definition of the table contained in the input file. Go to the `General` tab and provide the *Data source type* as `File`, the *Data source name* as `raviga` and the *Table/File name* as `ravigaproducts`. If you wish to, you can also provide optional *Short description* and *Long description*.
 
