@@ -77,12 +77,17 @@ $ cd /IBMdemos
 
 Download the data:
 
+> **NOTE** the command uses `-O` (not zero)
+
 ```bash
-$ wget http://ibm.biz/datastage-standalone-data
+$ wget http://ibm.biz/datastage-standalone-data -O raviga-products.csv
 ```
 
-Unzip it:
+Verify the content
 
 ```bash
-$ unzip dataset.zip
+$ cat raviga-products.csv
+RAV8XLIGA,90033
+...
+RAV9XLIGA,90033
 ```
