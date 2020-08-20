@@ -6,7 +6,7 @@ This lab is comprised of the following steps:
 
 1. [Create a Transformation project](#1-create-a-transformation-project)
 1. [Create the table definition](#2-create-the-table-definition)
-1. [Create a job](#3-create-a-job)
+1. [Create the job](#3-create-the-job)
 1. [Compile and run the job](#4-compile-and-run-the-job)
 1. [Use Operations Console to view previous logs](#5-use-operations-console-to-view-previous-logs)
 1. [View output](#6-view-output)

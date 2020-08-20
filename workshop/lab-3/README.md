@@ -39,21 +39,17 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 * Provide the following connection details and click `OK`. Click `Save` on the new modal that pops up.
 
-TODO: insert connection details and image
-
 ```ini
 Name: DB2WH
 Connector type: JDBC
-URL:
+URL: jdbc:db2://db2w-kzwbsid.us-east.db2w.cloud.ibm.com:50001/BLUDB:sslConnection=true;
 Username: bluadmin
-Password:
+Password: ****************
 ```
 
 ![Add connection](images/add-connection.png)
 
 A tile for the new connection will now be displayed in the `Connections` tab.
-
-TODO: insert image
 
 ![Created connection](images/created-connection.png)
 
