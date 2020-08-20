@@ -76,7 +76,7 @@ Before designing the job, take a few minutes to look at the various buttons and 
     3. Smart palette - which applies smart logic based on usage patterns to reorder the items available in the palette. If disabled, the items in the palette are displayed in an alphabetical order.
     4. Smart stage suggestions - applies smart logic based on usage patterns to suggest thenext stage that you might want to add to the job.
 
-! [Job options](images/job-options.png)
+![Job options](images/job-options.png)
 
 * Drag a ***File*** connector to the canvas. The `Table Definition Asset Browser` opens up. Select `raviga\ravigaproducts` and click `Next`.
 
@@ -168,7 +168,9 @@ If the compilation was not successful, you should see a red error icon and the m
 
 * CD to the location where you had stored the file. If you provided a path starting at "/", then it will be stored at that location in the server. Since we had only provided `output.csv` as the file path in the ***File*** connector, the file will be available in the Transformation project's folder, i.e.,
 
-/opt/IBM/InformationServer/Server/Projects/\<project-name\>/
+```ini
+/opt/IBM/InformationServer/Server/Projects/<project-name>/
+```
 
 ![CD to project folder](images/cd-to-project-folder.png)
 
@@ -185,3 +187,5 @@ Alternatively you can go up one level to the `Jobs` tab, and hover over your job
 ![Schedule job 2](images/schedule-2.png)
 
 **Note:** You can only schedule your job once it has been successfully compiled.
+
+**CONGRATULATIONS!!** You have completed this lab!

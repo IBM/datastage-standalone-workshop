@@ -98,7 +98,7 @@ Use a ***Transformer*** stage to perform the following two modifications:
 
 ![Transformer - 1.1 - add MIDINITIAL](images/transformer-1.1-add-midinitial.png)
 
-* Begin building the derivation rule for `MIDINITIAL` by finding the `NullToValue` function in the table. Clicking on the entry in the table will insert it in the "Derivation" at the top. You can also use the search bar to look for the function. Replace the `%input_column_input_column%` with the \<Link\>.MIDINIT input variable which can also be found in the table and the `%value%` with `" "`. \<Link\> represents the identifier of the input link for the transformer. Click `OK` to go back to the Stage page.
+* Begin building the derivation rule for `MIDINITIAL` by finding the `NullToValue` function in the table. Clicking on the entry in the table will insert it in the "Derivation" at the top. You can also use the search bar to look for the function. Replace the `%input_column_input_column%` with the `<Link>.MIDINIT` input variable which can also be found in the table and the `%value%` with `" "`. `<Link>` represents the identifier of the input link for the transformer. Click `OK` to go back to the Stage page.
 
 ![Transformer - 1.2 - add MIDINITIAL derivation](images/transformer-1.2-add-midinitial-derivation.png)
 
@@ -132,7 +132,7 @@ Use a ***Transformer*** stage to perform the following two modifications:
 
 * Repeat the process above to add another Stage variable `FULLNAME` which will represent the complete name of the employee. Provide the *Derivation* as `CompactWhiteSpace(<Link>.FIRSTNME:" ":<Link>.MIDINIT:" ":<Link>.LASTNAME)`, the *Name* of the stage variable as *FULLNAME*, the *SQL type* as *Varchar* and the *Precision* as *36* and the *Scale* as *0*. Click `OK` to save the changes and return to the canvas.
 
-***NOTE:*** \<Link\> needs to be replaced with the identifier of the input link. *CompactWhiteSpace* is a function that will compact any continuous white spaces into a single white space. `:` is the operator used for concatenation.
+***NOTE:*** `<Link>` needs to be replaced with the identifier of the input link. *CompactWhiteSpace* is a function that will compact any continuous white spaces into a single white space. `:` is the operator used for concatenation.
 
 ![Transformer - 4 - complete FULLNAME](images/transformer-2.4-complete-fullname.png)
 
@@ -204,6 +204,10 @@ Since the output links have now been added, we can provide the 2 stage variables
 
 * CD to the location where you had stored the file. If you provided a path starting at "/", then it will be stored at that location in the server. Since we had only provided `output.csv` as the file path in the ***File*** connector, the file will be available in the Transformation project's folder, i.e.,
 
-/opt/IBM/InformationServer/Server/Projects/\<project-name\>/
+```ini
+/opt/IBM/InformationServer/Server/Projects/<project-name>/
+```
 
 ![CD to project folder](images/cd-to-project-folder.png)
+
+**CONGRATULATIONS!!** You have completed this lab!
