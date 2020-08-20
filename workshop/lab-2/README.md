@@ -90,7 +90,48 @@ Confirm the publish action.
 
 ## 3. Re-analyze and view results
 
-* Click on the "2 data sets"
-* See SALES and CUSTOMERS
-* Kebab menu for SALES, click analyze
-* See items that violated the rule
+Go back to the `JK Orders` workspace and click on the `Data sets` links
+
+![16-data-sets](images/16-data-sets.png)
+
+Click on the `SALES` data set.
+
+![17-sales](images/17-sales.png)
+
+We can now apply the rule by clicking the `+ Add rule` button.
+
+![18-rules](images/18-rules.png)
+
+Choose the `AdultInRangeNumeric` rule and click `Next`.
+
+![19-select-rule](images/19-select-rule.png)
+
+We now have to find the rule to a specific column in our data set. Click on the `age` variable name on the left, this is the rule. And Click on the `AGE` column name on the right, this is our data source. Click on the `Bind` button and once bound you can click `Next`.
+
+![20-bind](images/20-bind.png)
+
+We don't need to test the rule this time, we can just click on `Save`.
+
+![21-test](images/21-test.png)
+
+You should now see the rule in the data set view. Click on the `Analyze` button to restart the analysis with the new rule.
+
+![22-analyze](images/22-analyze.png)
+
+Confirm to start the analysis.
+
+![23-analyze-confirm](images/23-analyze-confirm.png)
+
+You may need to refresh your browser a few times for this step. It will take a few minutes. You'll see the state go to `Running` to `Successful` when done.
+
+![24-running](images/24-running.png)
+
+Once complete, go to the `Data quality` tab. You'll see that the new rule has one finding. Click on the findings to view the exception.
+
+![25-findings](images/25-findings.png)
+
+Scrolling to the right you'll see that there is one entry whos age is 17, this is less than the required 18 for our rule!
+
+![26-findings-view](images/26-findings-view.png)
+
+**CONGRATULATIONS!!** You have completed this lab!
