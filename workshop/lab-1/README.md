@@ -11,10 +11,9 @@ This lab is comprised of the following steps:
 1. [Use Operations Console to view previous logs](#5-use-operations-console-to-view-previous-logs)
 1. [View output](#6-view-output)
 
-
 ## 1. Create a Transformation project
 
-* On the IBM DataStage Flow Designer, click on the `Projects` tab and click `+ Create`. In the modal that opens up, type in a name for the project and click `Create`. 
+* On the IBM DataStage Flow Designer, click on the `Projects` tab and click `+ Create`. In the modal that opens up, type in a name for the project and click `Create`.
 
 ![Create project](images/create-project.png)
 
@@ -69,7 +68,7 @@ A new tab with the name `Job_1*` opens up where you can now start designing the 
 
 ![Update file connector 2](images/update-file-connector-2.png)
 
-* Drag and drop a ***Filter*** stage on the canvas. Provide the output of the ***File*** connector as the input to the ***Filter*** stage. To do this, click on the little blue dot on the right side of the ***File*** connector and drag the mouse pointer to the ***Filter*** stage. 
+* Drag and drop a ***Filter*** stage on the canvas. Provide the output of the ***File*** connector as the input to the ***Filter*** stage. To do this, click on the little blue dot on the right side of the ***File*** connector and drag the mouse pointer to the ***Filter*** stage.
 
 ***NOTE***: For another method to connect the ***File*** connector to the ***Filter*** stage, click on the ***File*** connector to select it. Drag and drop the ***Filter*** stage and it will automatically be connected to the ***File*** connector.
 
