@@ -1,11 +1,11 @@
 
-## Information Server: DataStage and Information Analyzer Workshop
+## Information Server Workshop
 
-Welcome to our workshop! In this workshop we'll be using IBM Information Server to design data processing jobs with DataStage and to analyze relationships in data using Information Analyzer.
+Welcome to our workshop! In this workshop we'll be using IBM Information Server to design data processing jobs with DataStage and create rules using Governance Catalog.
 
 * Get acquinted with Information Server
 * Run a few DataStage jobs
-* Learn the ins and outs of Information Analyzer
+* Learn the ins and outs of Governance Catalog
 * Have fun!
 
 <!--
@@ -23,15 +23,7 @@ Welcome to our workshop! In this workshop we'll be using IBM Information Server 
 
 IBM InfoSphere Information Server is a market-leading data integration platform which includes a family of products that enable you to understand, cleanse, monitor, transform and deliver data, and to collaborate to bridge the gap between business and IT. InfoSphere Information Server provides massively parallel processing (MPP) capabilities to deliver a highly scalable and flexible integration platform that handles all data volumes, big and small.
 
-### DataStage
-
-A highly scalable data-integration tool for designing, developing and running jobs that move and transform data on premises and on the cloud.
-
-![datastage designer](.gitbook/generic/datastage.png)
-
-### Information Analyzer
-
-Provides data profiling and analysis to accurately evaluate the content and structure of your data for consistency and quality.
+![DataStage Designer](.gitbook/generic/datastage.png)
 
 ## Credits
 
