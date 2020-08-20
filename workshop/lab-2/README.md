@@ -106,7 +106,7 @@ Choose the `AdultInRangeNumeric` rule and click `Next`.
 
 ![19-select-rule](images/19-select-rule.png)
 
-We now have to find the rule to a specific column in our data set. Click on the `age` variable name on the left, this is the rule. And Click on the `AGE` column name on the right, this is our data source. Click on the `Bind` button and once bound you can click `Next`.
+We now have to bind the rule to a specific column in our data set. Click on the `age` variable name on the left, this is the rule. And click on the `AGE` column name on the right, this is our data source. Click on the `Bind` button and once bound you can click `Next`.
 
 ![20-bind](images/20-bind.png)
 

@@ -75,7 +75,7 @@ Change to the right folder:
 $ cd /IBMdemos
 ```
 
-Download the data
+Download the data:
 
 ```bash
 $ wget http://ibm.biz/datastage-standalone-data

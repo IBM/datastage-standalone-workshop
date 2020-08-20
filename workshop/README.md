@@ -3,7 +3,7 @@
 
 Welcome to our workshop! In this workshop we'll be using IBM Information Server to design data processing jobs with DataStage and create rules using Governance Catalog.
 
-* Get acquinted with Information Server
+* Get acquainted with Information Server
 * Run a few DataStage jobs
 * Learn the ins and outs of Governance Catalog
 * Have fun!
