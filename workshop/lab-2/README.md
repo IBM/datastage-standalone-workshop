@@ -1,6 +1,6 @@
-# Information Analyzer Data Exploration and Discovery
+# Lab 2: Rules with Governance Catalog
 
-Information Analyzer (IA) enables users to better understand their data. It can automatically profile, classify, validate, and govern, data, upon discovery of new sources. It uses pre-built and custom rules that will apply meaning and quality measurements, which are available for users of the data and interested parties.
+Governance Catalog enables users to better understand their data. It uses pre-built and custom rules that will apply meaning and quality measurements, which are available for users of the data and interested parties.
 
 This lab, will give you hands-on experience using Information Analyzer and the Information Governance Catalog. In this lab, you will learn the following:
 
