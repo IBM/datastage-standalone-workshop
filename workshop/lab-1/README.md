@@ -59,7 +59,7 @@ Before designing the job, take a few minutes to look at the various buttons and 
 
 2. The `Save`, `Compile` and `Run` icons are used to save, compile and run the job respectively.
 
-3. The `Compare` icon is used to compare this job with another job in the Project. 
+3. The `Compare` icon is used to compare this job with another job in the Project.
 
 4. The `View` menu has the following options
 
@@ -176,7 +176,7 @@ If the compilation was not successful, you should see a red error icon and the m
 
 DataStage Flow Designer provides the ability to run jobs as per a schedule.
 
-*  Back in the DataStage Flow Designer where we were designing the job, click on the `Schedule` icon. In the modal that opens up, provide the frequency for running the job - whether you want to run it every `Day`, `Week ` or `Month`. Next to it, provide the time of the day when the job should run. Click `Schedule`.
+* Back in the DataStage Flow Designer where we were designing the job, click on the `Schedule` icon. In the modal that opens up, provide the frequency for running the job - whether you want to run it every `Day`, `Week` or `Month`. Next to it, provide the time of the day when the job should run. Click `Schedule`.
 
 ![Schedule job](images/schedule.png)
 
