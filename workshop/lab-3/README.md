@@ -1,4 +1,4 @@
-# Lab 3: DataStage with DB2 Warehouse
+# Lab 3: DataStage with database connections
 
 DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sources in order to glean meaningful and valuable information.
 
@@ -11,16 +11,18 @@ The purpose of this lab is to design a DataStage job to satisfy the following pr
 In this lab, you will learn:
 
 * How to create a job in DataStage.
-* How to load data from DB2 Warehouse into DataStage.
+* How to load data from Db2 Warehouse into DataStage.
 * How to perform transformations such as modifying tables, joining tables, aggregating table data and sorting table data.
 * How to write tabular data from DataStage into a file.
 * How to run jobs.
 * How to view logs for jobs.
 
+> **NOTE:** You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](../lab-1/README.md).
+
 This lab is comprised of the following steps:
 
 1. [Create a Transformation project](#1-create-a-transformation-project)
-1. [Add Db2WH connection](#2-add-db2wh-connection)
+1. [Add database connection](#2-add-database-connection)
 1. [Create the job](#3-create-the-job)
 1. [Compile and run the job](#4-compile-and-run-the-job)
 1. [View output](#5-view-output)
@@ -39,9 +41,9 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 ![Switch project](images/switch-project.png)
 
-## 2. Add Db2WH connection
+## 2. Add database connection
 
-The input tables - `EMP` (containing employee data) and `DEPT` (containing department data) - are already loaded in Db2 Warehouse. Let's add this Db2 warehouse instance as a `Connection` in DataStage.
+The input tables - `EMP` (containing employee data) and `DEPT` (containing department data) - are already loaded in Db2 Warehouse. Let's add a Db2 warehouse instance as a `Connection` in DataStage.
 
 * Click on the `Connections` tab and then click `+ Create` to add a new connection.
 
@@ -71,14 +73,14 @@ A tile for the new connection will now be displayed in the `Connections` tab.
 
 A new tab with the name `Job_1*` opens up where you can now start designing the parallel job.
 
-The first step is to load the input tables `DEPT` and `EMP` into DataStage. 
+The first step is to load the input tables `DEPT` and `EMP` into DataStage.
 
 The `DEPT` table contains the following columns:
 
 | Column Name | Data Type | Nullable |
 | - | - | - |
 | DEPTNO | VARCHAR(3) | N |
-| DEPTNAME | VARCHAR(36) | N | 
+| DEPTNAME | VARCHAR(36) | N |
 | MGRNO | CHAR(6) | Y |
 | ADMRDEPT | CHAR(3) | N |
 | LOCATION | CHAR(16) | Y |
