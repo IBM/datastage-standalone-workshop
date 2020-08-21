@@ -1,8 +1,8 @@
-# Lab 2: Rules with Governance Catalog
+# Lab 2: Create rules to analyze data
 
-Governance Catalog enables users to better understand their data. It uses pre-built and custom rules that will apply meaning and quality measurements, which are available for users of the data and interested parties.
+Information Server enables users to better understand their data. It uses pre-built and custom rules that will apply meaning and quality measurements, which are available for users of the data and interested parties.
 
-This lab, will give you hands-on experience using Information Analyzer and the Information Governance Catalog. In this lab, you will learn the following:
+This lab, will give you hands-on experience using Information Server's rule capabilities. In this lab, you will learn the following:
 
 * How to create a data rule
 * Apply the rule to a data set
@@ -24,7 +24,7 @@ Log in with the username `isadmin` and password `inf0Xerver`.
 
 ![2-gc-login](images/2-gc-login.png)
 
-The Information Governance Catalog overview page will appear.
+The overview page will appear.
 
 ![3-gc-landing](images/3-gc-landing.png)
 
