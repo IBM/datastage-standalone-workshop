@@ -21,8 +21,8 @@ This lab is comprised of the following steps:
 1. [Create the job](#3-create-the-job)
 1. [Compile and run the job](#4-compile-and-run-the-job)
 1. [Use Operations Console to view previous logs](#5-use-operations-console-to-view-previous-logs)
-1. [View output](#6-view-output)
-1. [Scheduling the job](#7-scheduling-the-job)
+1. [Scheduling the job](#6-scheduling-the-job)
+1. [View output](#7-view-output)
 
 ## Before you start
 
@@ -120,19 +120,19 @@ Before designing the job, take a few minutes to look at the various buttons and 
 
 ![Add file connector 2](images/add-file-connector-2.png)
 
-* The ***File*** connector should now be visible on the canvas. Double click on the ***File*** connector to open the Connector's Properties page. Provide the *File name* as `/IBMdemos/raviga-products.csv` which is where the source file is located. Further down, provide the *File format* as `Comma-separated value (CSV)`.
+* The ***File*** connector should now be visible on the canvas. Drag and drop a ***Filter*** stage on the canvas. Provide the output of the ***File*** connector as the input to the ***Filter*** stage. To do this, click on the little blue dot on the right side of the ***File*** connector and drag the mouse pointer to the ***Filter*** stage.
+
+**NOTE**: For another method to connect the ***File*** connector to the ***Filter*** stage, click on the ***File*** connector to select it and then drag and drop the ***Filter*** stage. The ***Filter*** stage will automatically be connected to the ***File*** connector.
+
+![Add filter stage](images/add-filter-stage.png)
+
+* Double click on the ***File*** connector to open the Connector's Properties page. Provide the *File name* as `/IBMdemos/raviga-products.csv` which is where the source file is located. Further down, provide the *File format* as `Comma-separated value (CSV)`.
 
 ![Update file connector](images/update-file-connector.png)
 
 * Scroll further down and update the *Null value* to `""`. Click `OK`.
 
 ![Update file connector 2](images/update-file-connector-2.png)
-
-* Drag and drop a ***Filter*** stage on the canvas. Provide the output of the ***File*** connector as the input to the ***Filter*** stage. To do this, click on the little blue dot on the right side of the ***File*** connector and drag the mouse pointer to the ***Filter*** stage.
-
-**NOTE**: For another method to connect the ***File*** connector to the ***Filter*** stage, click on the ***File*** connector to select it and then drag and drop the ***Filter*** stage. The ***Filter*** stage will automatically be connected to the ***File*** connector.
-
-![Add filter stage](images/add-filter-stage.png)
 
 * Double click the ***Filter*** stage to open the Stage's Properties page. Provide the value for *Where Clause* as `Zip IS NOT NULL`. This will filter out all the records in the table where the value of Zip is NULL. Click `OK`.
 
@@ -194,21 +194,7 @@ If the compilation was not successful, you should see a red error icon and the m
 
 ![View job run log](images/view-job-run-log.png)
 
-## 6. View output
-
-* The output file will be saved on the server. Switch to the server VM by clicking the first icon on the `Environment VMs panel` and selecting `iis-server`. Login as the `root` user with the password `inf0Xerver`.
-
-![Switch to server VM](images/switch-to-server-vm.png)
-
-* CD to the location where you had stored the file. If you provided a path starting at "/", then it will be stored at that location in the server. Since we had only provided `output.csv` as the file path in the ***File*** connector, the file will be available in the Transformation project's folder, i.e.,
-
-```ini
-/opt/IBM/InformationServer/Server/Projects/<project-name>/
-```
-
-![CD to project folder](images/cd-to-project-folder.png)
-
-## 7. Scheduling the job
+## 6. Scheduling the job
 
 DataStage Flow Designer provides the ability to run jobs as per a schedule.
 
@@ -221,5 +207,19 @@ Alternatively you can go up one level to the `Jobs` tab, and hover over your job
 ![Schedule job 2](images/schedule-2.png)
 
 **NOTE**: You can only schedule your job once it has been successfully compiled.
+
+## 7. View output
+
+* The output file will be saved on the server. Switch to the server VM by clicking the first icon on the `Environment VMs panel` and selecting `iis-server`. Login as the `root` user with the password `inf0Xerver`.
+
+![Switch to server VM](images/switch-to-server-vm.png)
+
+* CD to the location where you had stored the file. If you provided a path starting at "/", then it will be stored at that location in the server. Since we had only provided `output.csv` as the file path in the ***File*** connector, the file will be available in the Transformation project's folder, i.e.,
+
+```ini
+/opt/IBM/InformationServer/Server/Projects/<project-name>/
+```
+
+![CD to project folder](images/cd-to-project-folder.png)
 
 **CONGRATULATIONS!!** You have completed this lab!
