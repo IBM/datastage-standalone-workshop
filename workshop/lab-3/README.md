@@ -1,13 +1,23 @@
-# Lab 3: DataStage with Db2
+# Lab 3: DataStage with DB2 Warehouse
 
+DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sourcs in order to glean meaningful and valuable information.
+
+The purpose of this lab is to design a DataStage job to satisfy the following problem statement:
+
+```ini
 As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last).
+```
 
-**Notes:**
+> **Note:** You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](/workshop/lab-1/README.md).
 
-> 1. The input tables: `EMP` (containing employee data) and `DEPT` (containing department data) are already loaded in Db2 Warehouse. The connection details are provided in these steps.
-> 2. Table `EMP` uses column `WORKDEPT` and table `DEPT` uses column `DEPTNO` to identify the department number.
-> 3. We'll create the output file in the following directory: `/opt/IBM/InformationServer/Server/Projects/Lab3/`.
-> 4. You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in the previous lab.
+In this lab, you will learn:
+
+* How to create a job in DataStage.
+* How to load data from DB2 Warehouse into DataStage.
+* How to perform transformations such as modifying tables, joining tables, aggregating table data and sorting table data.
+* How to write tabular data from DataStage into a file.
+* How to run jobs.
+* How to view logs for jobs.
 
 This lab is comprised of the following steps:
 
@@ -32,6 +42,8 @@ The project takes a few minutes to be created and once ready, it will be visible
 ![Switch project](images/switch-project.png)
 
 ## 2. Add DB2 connection
+
+The input tables - `EMP` (containing employee data) and `DEPT` (containing department data) - are already loaded in Db2 Warehouse. Let's add this DB2 warehouse instance as a `Connection` in DataStage.
 
 * Click on the `Connections` tab and then click `+ Create` to add a new connection.
 
@@ -60,6 +72,37 @@ A tile for the new connection will now be displayed in the `Connections` tab.
 ![Create parallel job](images/create-parallel-job.png)
 
 A new tab with the name `Job_1*` opens up where you can now start designing the parallel job.
+
+The first step is to load the input tables `DEPT` and `EMP` into DataStage. 
+
+The `DEPT` table contains the following columns:
+
+| Column Name | Data Type | Nullable |
+| - | - | - |
+| DEPTNO | VARCHAR(3) | N |
+| DEPTNAME | VARCHAR(36) | N | 
+| MGRNO | CHAR(6) | Y |
+| ADMRDEPT | CHAR(3) | N |
+| LOCATION | CHAR(16) | Y |
+
+The `EMP` table contains the following columns:
+
+| Column Name | Data Type | Nullable |
+| - | - | - |
+| EMPNO | CHAR(6) | N |
+| FIRSTNME | VARCHAR(12) | N |
+| MIDINIT | CHAR(1) | Y |
+| LASTNAME | VARCHAR(15) | N |
+| WORKDEPT | VARCHAR(3) | Y |
+| PHONENO | CHAR(4) | Y |
+| HIREDATE | DATE(4) | Y |
+| JOB | CHAR(8) | Y |
+| EDLEVEL | SMALLINT | N |
+| SEX | CHAR(1) | Y |
+| BIRTHDATE | DATE(4) | Y |
+| SALARY | DECIMAL(9,2) | Y |
+| BONUS | DECIMAL(9,2) | Y |
+| COMM | DECIMAL(9,2) | Y |
 
 * First, drag a ***Connection*** connector to the canvas. In the modal that opens up, select the `DB2WH` connection that was created earlier and click `Next`.
 

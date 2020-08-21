@@ -1,6 +1,18 @@
-# Lab 1
+# Lab 1: Introduction to DataStage
 
-The purpose of this lab is to familiarize ourselves with the DataStage Flow Designer. We will be creating a simple job which will read a table from a local file, remove the records that have null values and the records that are duplicates, and write the contents of the table back into another local file.
+DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sourcs in order to glean meaningful and valuable information.
+
+The purpose of this lab is to familiarize ourselves with the DataStage Flow Designer and the Operations Console.
+
+In this lab, you will learn the following:
+
+* How to create a job in DataStage.
+* How to read tabular data from a file into DataStage.
+* How to perform transformations (such as filtering out records and removing duplicate values) on a table.
+* How to write tabular data from DataStage into a file.
+* How to run jobs.
+* How to view logs for jobs.
+* How to schedule jobs.
 
 This lab is comprised of the following steps:
 
@@ -156,7 +168,7 @@ If the compilation was not successful, you should see a red error icon and the m
 
 ![View job runs](images/view-job-runs.png)
 
-* Go to the `Log Messages` tab and check the `Full Messages` checkmark to see the complete log for the job run.
+* Go to the `Log Messages` tab and check the `Full Messages` checkmark to see the complete log for the job run. Clicking on an entry in the job log will display the log message details at the bottom.
 
 ![View job run log](images/view-job-run-log.png)
 
