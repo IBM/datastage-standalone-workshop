@@ -77,7 +77,7 @@ $ cd /IBMdemos
 
 Download the data:
 
-> **NOTE** the command uses `-O` (not zero)
+> **NOTE**: the command uses `-O` (not zero)
 
 ```bash
 $ wget http://ibm.biz/datastage-standalone-data -O raviga-products.csv

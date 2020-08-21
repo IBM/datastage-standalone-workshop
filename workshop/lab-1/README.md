@@ -1,6 +1,6 @@
 # Lab 1: Introduction to DataStage
 
-DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sourcs in order to glean meaningful and valuable information.
+DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sources in order to glean meaningful and valuable information.
 
 The purpose of this lab is to familiarize ourselves with the DataStage Flow Designer and the Operations Console.
 
@@ -59,7 +59,7 @@ We will be using the raviga-products.csv file which was loaded as part of [Lab 0
 
 ## 3. Create the job
 
-* Click on the `Jobs` tab and then click `+ Create`. Click `Parallel job`.
+* Click on the `Jobs` tab and then click `+ Create`. Click `Parallel Job`.
 
 ![Create parallel job](images/create-parallel-job.png)
 
@@ -73,10 +73,10 @@ Before designing the job, take a few minutes to look at the various buttons and 
 
 3. The `Compare` icon is used to compare this job with another job in the Project.
 
-4. The `View` menu has the following options
+4. The `View` menu has the following options:
 
-    1. View OSH code - which is available once the job has been successfully compiled
-    2. View log - which is available once the job has been run
+    1. View OSH code - which is available once the job has been successfully compiled.
+    2. View log - which is available once the job has been run.
     3. Properties - based on what is selected in the job canvas before clicking on `Properties`, either the properties of the job or of a connector/stage/link are displayed.
 
 5. The `Schedule` icon is used to set a schedule to run the job.
@@ -86,7 +86,7 @@ Before designing the job, take a few minutes to look at the various buttons and 
     1. Apply horizontal layout - which arranges all the connectors and stages in the canvas in a horizontal manner with data flowing from left to right.
     2. The ability to view/hide annotations, arrows, link names, and the type of the connector/stage.
     3. Smart palette - which applies smart logic based on usage patterns to reorder the items available in the palette. If disabled, the items in the palette are displayed in an alphabetical order.
-    4. Smart stage suggestions - applies smart logic based on usage patterns to suggest thenext stage that you might want to add to the job.
+    4. Smart stage suggestions - applies smart logic based on usage patterns to suggest the next stage that you might want to add to the job.
 
 ![Job options](images/job-options.png)
 
@@ -94,7 +94,7 @@ Before designing the job, take a few minutes to look at the various buttons and 
 
 ![Add file connector](images/add-file-connector.png)
 
-* Ensure that both the columns `ProductID` and `Zip` are selected and click `Add to job`.
+* Ensure that both the columns `ProductID` and `Zip` are selected and click `Add to Job`.
 
 ![Add file connector 2](images/add-file-connector-2.png)
 
@@ -108,7 +108,7 @@ Before designing the job, take a few minutes to look at the various buttons and 
 
 * Drag and drop a ***Filter*** stage on the canvas. Provide the output of the ***File*** connector as the input to the ***Filter*** stage. To do this, click on the little blue dot on the right side of the ***File*** connector and drag the mouse pointer to the ***Filter*** stage.
 
-***NOTE***: For another method to connect the ***File*** connector to the ***Filter*** stage, click on the ***File*** connector to select it. Drag and drop the ***Filter*** stage and it will automatically be connected to the ***File*** connector.
+**NOTE**: For another method to connect the ***File*** connector to the ***Filter*** stage, click on the ***File*** connector to select it and then drag and drop the ***Filter*** stage. The ***Filter*** stage will automatically be connected to the ***File*** connector.
 
 ![Add filter stage](images/add-filter-stage.png)
 
@@ -142,7 +142,7 @@ Before designing the job, take a few minutes to look at the various buttons and 
 
 ![Save compile](images/save-compile.png)
 
-If the compilation was not successful, you should see a red error icon and the message `Compiler failed with ### errors.` where ### represeents the number of errors. Clicking on `View errors` brings up a modal that lists all the errors that were found. The stage/connector/link that has the error is also highlighted in the canvas and you can hover over it to see error.
+If the compilation was not successful, you should see a red error icon and the message `Compiler failed with ### errors.` where ### represents the number of errors. Clicking on `View errors` brings up a modal that lists all the errors that were found. The stage/connector/link that has the error is also highlighted in the canvas and you can hover over it to see the error.
 
 ![Save compile error](images/save-compile-error.png)
 
@@ -198,6 +198,6 @@ Alternatively you can go up one level to the `Jobs` tab, and hover over your job
 
 ![Schedule job 2](images/schedule-2.png)
 
-**Note:** You can only schedule your job once it has been successfully compiled.
+**NOTE**: You can only schedule your job once it has been successfully compiled.
 
 **CONGRATULATIONS!!** You have completed this lab!

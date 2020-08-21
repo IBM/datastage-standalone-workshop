@@ -1,14 +1,12 @@
 # Lab 3: DataStage with DB2 Warehouse
 
-DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sourcs in order to glean meaningful and valuable information.
+DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sources in order to glean meaningful and valuable information.
 
 The purpose of this lab is to design a DataStage job to satisfy the following problem statement:
 
-```ini
-As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last).
-```
+> As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last).
 
-> **Note:** You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](/workshop/lab-1/README.md).
+**NOTE**: You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](/workshop/lab-1/README.md).
 
 In this lab, you will learn:
 
@@ -22,8 +20,8 @@ In this lab, you will learn:
 This lab is comprised of the following steps:
 
 1. [Create a Transformation project](#1-create-a-transformation-project)
-1. [Add Db2 connection](#2-add-db2-connection)
-1. [Create a job](#3-create-a-job)
+1. [Add Db2WH connection](#2-add-db2wh-connection)
+1. [Create the job](#3-create-the-job)
 1. [Compile and run the job](#4-compile-and-run-the-job)
 1. [View output](#5-view-output)
 
@@ -41,9 +39,9 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 ![Switch project](images/switch-project.png)
 
-## 2. Add DB2 connection
+## 2. Add Db2WH connection
 
-The input tables - `EMP` (containing employee data) and `DEPT` (containing department data) - are already loaded in Db2 Warehouse. Let's add this DB2 warehouse instance as a `Connection` in DataStage.
+The input tables - `EMP` (containing employee data) and `DEPT` (containing department data) - are already loaded in Db2 Warehouse. Let's add this Db2 warehouse instance as a `Connection` in DataStage.
 
 * Click on the `Connections` tab and then click `+ Create` to add a new connection.
 
@@ -67,7 +65,7 @@ A tile for the new connection will now be displayed in the `Connections` tab.
 
 ## 3. Create the job
 
-* Click on the `Jobs` tab and then click `+ Create`. Click `Parallel job`.
+* Click on the `Jobs` tab and then click `+ Create`. Click `Parallel Job`.
 
 ![Create parallel job](images/create-parallel-job.png)
 
@@ -129,7 +127,10 @@ Use a ***Transformer*** stage to perform the following two modifications:
 1. Update the output of the `EMP` table by replacing any NULL `MIDINIT` values with `" "`. This is needed for a future step where we will combine the FIRSTNME, MIDINIT and LASTNAME columns to create the FULLNAME of the employee.
 2. Currently, the `EMP` table uses the `WORKDEPT` column to identify the department number whereas the `DEPT` table uses the `DEPTNO` column. Modify the output of the `EMP` table by changing the name of the `WORKDEPT` column to `DEPTNO`. This is needed for a future step where we will ***Join*** the two tables.
 
+
 * Drag and drop a ***Transformer*** stage next to the ***Connection*** connector for the `EMP` table. Provide the output of the `EMP` table ***Connection*** connector as the input to the ***Transformer*** stage. For this, click on the little blue dot on the right side of the ***Connection*** connector and drag the mouse pointer to the ***Transformer*** stage.
+
+**NOTE**: For another method to connect the ***Connection*** connector to the ***Transformation*** stage, click on the ***Connection*** connector to select it, then drag and drop the ***Transformation*** stage. The ***Transformation*** stage will automatically be connected to the ***Connection*** connector.
 
 ![Add transformer for EMP](images/add-transformer-for-emp.png)
 
@@ -141,7 +142,7 @@ Use a ***Transformer*** stage to perform the following two modifications:
 
 ![Transformer - 1.1 - add MIDINITIAL](images/transformer-1.1-add-midinitial.png)
 
-* Begin building the derivation rule for `MIDINITIAL` by finding the `NullToValue` function in the table. Clicking on the entry in the table will insert it in the "Derivation" at the top. You can also use the search bar to look for the function. Replace the `%input_column_input_column%` with the `<Link>.MIDINIT` input variable which can also be found in the table and the `%value%` with `" "`. `<Link>` represents the identifier of the input link for the transformer. Click `OK` to go back to the Stage page.
+* Begin building the derivation rule for `MIDINITIAL` by finding the `NullToValue` function in the table. Clicking on the entry in the table will insert it in the "Derivation" at the top. You can also use the search bar to look for the function. Replace the `%input_column_input_column%` with the `<Link>.MIDINIT` input variable which can also be found in the table and the `%value%` with `" "`. `<Link>` represents the identifier of the input link for the ***Transformer***. Click `OK` to go back to the Stage page.
 
 ![Transformer - 1.2 - add MIDINITIAL derivation](images/transformer-1.2-add-midinitial-derivation.png)
 
@@ -149,7 +150,7 @@ Use a ***Transformer*** stage to perform the following two modifications:
 
 ![Transformer - 1.3 - complete MIDINITIAL](images/transformer-1.3-complete-midinitial.png)
 
-* Now go to the `Outputs` tab and in the table find the entry for the `MIDINIT` column. Double click on the derivation value for this entry (it will open up the Derivation builder) and change the rderivation value to use the newly created `MIDINITIAL` stage variable instead. Next, look for the entry for the `WORKDEPT` column. Double click on the `WORKDEPT` value under the `Column name` column and replace the text with `DEPTNO`. Click `OK`.
+* Now go to the `Outputs` tab and in the table find the entry for the `MIDINIT` column. Double click on the derivation value for this entry (it will open up the Derivation builder) and change the derivation value to use the newly created `MIDINITIAL` stage variable instead. Next, look for the entry for the `WORKDEPT` column. Double click on the `WORKDEPT` value under the `Column name` column and replace the text with `DEPTNO`. Click `OK`.
 
 ![Transformer - 1.4 - updates on Output tab](images/transformer-1.4-updates-on-output-tab.png)
 
@@ -175,7 +176,7 @@ Use a ***Transformer*** stage to perform the following two modifications:
 
 * Repeat the process above to add another Stage variable `FULLNAME` which will represent the complete name of the employee. Provide the *Derivation* as `CompactWhiteSpace(<Link>.FIRSTNME:" ":<Link>.MIDINIT:" ":<Link>.LASTNAME)`, the *Name* of the stage variable as *FULLNAME*, the *SQL type* as *Varchar* and the *Precision* as *36* and the *Scale* as *0*. Click `OK` to save the changes and return to the canvas.
 
-***NOTE:*** `<Link>` needs to be replaced with the identifier of the input link. *CompactWhiteSpace* is a function that will compact any continuous white spaces into a single white space. `:` is the operator used for concatenation.
+**NOTE**: `<Link>` needs to be replaced with the identifier of the input link. *CompactWhiteSpace* is a function that will compact any continuous white spaces into a single white space. `:` is the operator used for concatenation.
 
 ![Transformer - 4 - complete FULLNAME](images/transformer-2.4-complete-fullname.png)
 
@@ -213,7 +214,7 @@ Since the output links have now been added, we can provide the 2 stage variables
 
 ![Confirm join stage](images/confirm-join-stage.png)
 
-* Go to the `Outputs` tab and verify that you can see `FULLNAME` and `MEAN_TOTALPAY` in the output column list.
+* Go to the `Outputs` tab and verify that you can see `FULLNAME` and `MEAN_TOTALCOMP` in the output column list.
 
 ![Confirm join stage outputs](images/confirm-join-stage-outputs.png)
 
