@@ -75,7 +75,7 @@ We will be using the raviga-products.csv file which was loaded as part of [Lab 0
 
 * Next, go to the `Columns` tab and click `+ Add`. A new entry is added in the table. Edit the entry and update the *Column name* to `ProductID`. Mark the column as *Key*. Update the *SQL type* to `Varchar` and the *Length* to `9`.
 
-* Click on `+ Add` to add another entry in the table. Edit this entry and update the *Column name* to `Zip`, *SQL type* to `Integer` and *Length* to `6`. Mark the column as *Nullable*. Click `OK`. In the modal that pops up, click `Save`.
+* Click on `+ Add` to add another entry in the table. Edit this entry and update the *Column name* to `Zip`, *SQL type* to `Integer`, *Extended* to `"" (blank)` and *Length* to `6`. Mark the column as *Nullable*. Click `OK`. In the modal that pops up, click `Save`.
 
 ![Complete table definition](images/complete-table-definition.png)
 
