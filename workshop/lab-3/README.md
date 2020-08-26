@@ -29,7 +29,7 @@ This lab is comprised of the following steps:
 
 ## Before you start
 
-Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`. 
+Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`.
 
 ![Switch to iis-client](images/switch-to-iis-client.png)
 
@@ -150,7 +150,6 @@ Use a ***Transformer*** stage to perform the following two modifications:
 
 1. Update the output of the `EMP` table by replacing any NULL `MIDINIT` values with `" "`. This is needed for a future step where we will combine the FIRSTNME, MIDINIT and LASTNAME columns to create the FULLNAME of the employee.
 2. Currently, the `EMP` table uses the `WORKDEPT` column to identify the department number whereas the `DEPT` table uses the `DEPTNO` column. Modify the output of the `EMP` table by changing the name of the `WORKDEPT` column to `DEPTNO`. This is needed for a future step where we will ***Join*** the two tables.
-
 
 * Drag and drop a ***Transformer*** stage next to the ***Connection*** connector for the `EMP` table. Provide the output of the `EMP` table ***Connection*** connector as the input to the ***Transformer*** stage. For this, click on the little blue dot on the right side of the ***Connection*** connector and drag the mouse pointer to the ***Transformer*** stage.
 

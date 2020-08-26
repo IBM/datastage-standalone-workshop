@@ -26,7 +26,7 @@ This lab is comprised of the following steps:
 
 ## Before you start
 
-Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`. 
+Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`.
 
 ![Switch to iis-client](images/switch-to-iis-client.png)
 

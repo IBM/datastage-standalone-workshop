@@ -18,6 +18,7 @@ This lab is comprised of 2 sections. In the first section, we will see how to as
 This lab consists of the following steps:
 
 [Section 1: Join the data sets](#section-1-join-the-data-sets)
+
 1. [Create a Transformation project](#1-create-a-transformation-project)
 1. [Add database connection](#2-add-database-connection)
 1. [Create the job](#3-create-the-job)
@@ -25,6 +26,7 @@ This lab consists of the following steps:
 1. [View output](#5-view-output)
 
 [Section 2: Create and run data rule](#section-2-create-and-run-data-rule)
+
 1. [Import and view the data](#1-import-and-view-the-data)
 1. [Create a data rule](#2-create-a-data-rule)
 1. [Re-analyze and view results](#3-re-analyze-and-view-results)
@@ -33,7 +35,7 @@ This lab consists of the following steps:
 
 ## Before you start
 
-Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`. 
+Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`.
 
 ![Switch to iis-client](images/switch-to-iis-client.png)
 
@@ -147,7 +149,7 @@ The `EMP` table uses the `WORKDEPT` column to identify the department number whe
 
 ![Add output connection](images/add-output-connection.png)
 
-* Double click on the ***Connection*** connector to open up the Properties page on the right. Verify that the URL, username and password are already populated. 
+* Double click on the ***Connection*** connector to open up the Properties page on the right. Verify that the URL, username and password are already populated.
 
 ![Connection properties - 1 - already populated](images/connection-properties-1-already-populated.png)
 
@@ -179,7 +181,7 @@ After a successful run, the results will be stored within the DB2WH connection i
 
 ## 1. Import and view the data
 
-Switch to the `iis-client` VM and launch `Firefox`. 
+Switch to the `iis-client` VM and launch `Firefox`.
 
 ![Switch to iis-client](images/switch-to-iis-client.png)
 
@@ -195,7 +197,7 @@ Switch to the `iis-client` VM and launch `Firefox`.
 
 ![3-gc-landing](images/3-gc-landing.png)
 
-* Click on the `Connections` tab and click `+ Create connections`. 
+* Click on the `Connections` tab and click `+ Create connections`.
 
 ![4-connections](images/4-connections.png)
 
@@ -243,7 +245,7 @@ Password: ****************
 
 ![13-workspace-overview](images/13-workspace-overview.png)
 
-* Before we create new rules, let's look at the data set that will be used in this lab. Click on the tile for `<user>_DEPTEMP`. 
+* Before we create new rules, let's look at the data set that will be used in this lab. Click on the tile for `<user>_DEPTEMP`.
 
 ![14-data-sets](images/14-data-sets.png)
 
