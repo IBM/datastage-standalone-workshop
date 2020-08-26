@@ -27,6 +27,28 @@ This lab is comprised of the following steps:
 1. [Compile and run the job](#4-compile-and-run-the-job)
 1. [View output](#5-view-output)
 
+## Before you start
+
+Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox`.
+
+![Switch to iis-client](images/switch-to-iis-client.png)
+
+Click on `Classic Launchpad` in the Bookmarks tab. The first time you try this out, you might see a certificate error. To get past it, click on `Advanced...` and then click `Accept the Risk and Continue`.
+
+![Classic Launchpad](images/select-classic-launchpad.png)
+
+Click on `DataStage Flow Designer`.
+
+![Select DFD](images/select-dfd.png)
+
+Login with the credentials `isadmin`/`inf0Xerver`.
+
+![Log into DFD](images/log-into-dfd.png)
+
+This brings up the `DataStage Flow Designer`. Click `OK`.
+
+![DFD is up](images/dfd-is-up.png)
+
 ## 1. Create a Transformation project
 
 * On the IBM DataStage Flow Designer, click on the `Projects` tab and click `+ Create`. In the modal that opens up, type in a name for the project and click `Create`.
