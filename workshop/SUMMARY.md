@@ -10,6 +10,7 @@
 * [Lab 1: Intro to DataStage](lab-1/README.md)
 * [Lab 2: Create rules to analyze data](lab-2/README.md)
 * [Lab 3: DataStage with database connections](lab-3/README.md)
+* [Lab 4: Analyze data across data sets](lab-4/README.md)
 
 ### Resources
 
