@@ -24,9 +24,9 @@ Before we start the lab, let's switch to the `iis-client` VM and launch `Firefox
 
 ![Switch to iis-client](images/switch-to-iis-client.png)
 
-Launch the desktop client `Classic Launchpad`.
+Launch the desktop client by going to the start menu and searching for `DataStage Designer`.
 
-![Classic Launchpad](images/launch-desktop-client.png)
+![DataStage Designer](images/designer-1.png)
 
 ## 1. Create job layout
 
