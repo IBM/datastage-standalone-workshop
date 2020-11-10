@@ -98,10 +98,10 @@ The entire DataStage project will be saved and exported to your configured BitBu
 
 There will be a success message if everything was exported correctly.
 
-![Commit](images/git-3.png)
+![Success](images/git-3.png)
 
 Navigate back to your BitBucket repository to see the exported files.
 
-![Commit](images/git-4.png)
+![Exported files](images/git-4.png)
 
 **CONGRATULATIONS!!** You have completed this lab!

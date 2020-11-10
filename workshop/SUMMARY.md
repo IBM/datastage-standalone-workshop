@@ -10,7 +10,8 @@
 * [Lab: Intro to DataStage](lab-file/README.md)
 * [Lab: Create rules to analyze data](lab-igc/README.md)
 * [Lab: DataStage with database connections](lab-db2/README.md)
-* [Lab: Analyze data across data sets](lab-multi-db2/README.md)
+* [Lab: Analyze data across data sets](lab-multi-dbs/README.md)
+* [Lab: Read JSON from a REST call](lab-rest/README.md)
 * [Lab: Configure a Git server](lab-git/README.md)
 
 ### Resources
