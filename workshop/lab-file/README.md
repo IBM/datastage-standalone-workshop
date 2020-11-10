@@ -62,7 +62,7 @@ The project takes a few minutes to be created and once ready, it will be visible
 
 ## 2. Create the table definition
 
-We will be using the raviga-products.csv file which was loaded as part of [Lab 0](/workshop/lab-0/README.md#3-copy-the-data-over). This file contains tabular data having 2 columns:
+We will be using the `raviga-products.csv` file which contains tabular data having 2 columns:
 
 | Column Name | Data Type |
 | - | - |

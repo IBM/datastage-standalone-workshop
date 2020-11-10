@@ -1,4 +1,4 @@
-# Lab 4: Analyze data across data sets
+# Lab: Analyze data across data sets
 
 Information Server enables users to better understand their data. It uses pre-built and custom rules that will apply meaning and quality measurements, which are available for users of the data and interested parties.
 

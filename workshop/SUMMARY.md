@@ -6,10 +6,11 @@
 
 ### Getting Started
 
-* [Lab 0: Environment setup](lab-0/README.md)
-* [Lab 1: Intro to DataStage](lab-1/README.md)
-* [Lab 2: Create rules to analyze data](lab-2/README.md)
-* [Lab 3: DataStage with database connections](lab-3/README.md)
+* [Lab: Environment setup](lab-skytap/README.md)
+* [Lab: Intro to DataStage](lab-file/README.md)
+* [Lab: Create rules to analyze data](lab-igc/README.md)
+* [Lab: DataStage with database connections](lab-db2/README.md)
+* [Lab: Analyze data across data sets](lab-multi-db2/README.md)
 
 ### Resources
 

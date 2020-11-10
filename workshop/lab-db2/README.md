@@ -1,4 +1,4 @@
-# Lab 3: DataStage with database connections
+# Lab: DataStage with database connections
 
 DataStage Flow Designer enables users to create, edit, load, and run DataStage jobs which can be used to perform integration of data from various sources in order to glean meaningful and valuable information.
 
@@ -6,7 +6,7 @@ The purpose of this lab is to design a DataStage job to satisfy the following pr
 
 > As a data engineer, you have been asked by the Line of Business that you support, to produce a new data file that contains all employees whose total compensation is less than $50,000. The file must also contain the Department Name that the employee works in, and the mean average salary of all employees in that department who earn less than 50,000. In addition, the file must be sorted in descending order, based on the mean average salary amount. Finally, the application that will consume this file, expects the full name of the employee to be in one field, formatted as first, middle initial, last).
 
-**NOTE**: You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](/workshop/lab-1/README.md).
+**NOTE**: You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](/workshop/lab-file/README.md).
 
 In this lab, you will learn:
 
@@ -17,7 +17,7 @@ In this lab, you will learn:
 * How to run jobs.
 * How to view logs for jobs.
 
-> **NOTE:** You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](../lab-1/README.md).
+> **NOTE:** You can use the ***Peek*** stage to check intermediate results in the job as demonstrated in [Lab 1](../lab-file/README.md).
 
 This lab is comprised of the following steps:
 
