@@ -4,7 +4,6 @@ IBM DataStage Flow Designer allows you to read data from a mainframe. More speci
 
 To keep things simple in this lab we're going to speak generally about mainframes and COBOL. Files from a mainframe are usually saved as binary files and sFTPed to some server where DataStage can access them. The binary files alone are not enough for DataStage to read the contents. A COBOL playbook is required to translate the data from binary to ascii. Both files are available here: <https://github.com/IBM/datastage-standalone-workshop/tree/master/data/mainframe>.
 
-
 This lab consists of the following steps:
 
 1. [Create job layout](#1-create-job-layout)
