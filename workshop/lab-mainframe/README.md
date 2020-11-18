@@ -1,15 +1,9 @@
 # Lab: Transform EBCIDIC data to CSV with COBOL Copybook
 
-You can use the REST protocols to incorporate IBM DataStage Flow Designer features in your custom application. You use the REST protocol to perform actions such as compiling jobs, running jobs, and getting job status.
+IBM DataStage Flow Designer allows you to read data from a mainframe. More specifically, you can specify inputs in your DataStage job to be in EBCIDIC format and to import COBOL copybooks as table definitions.
 
-The following REST calls are supported:
+To keep things simple in this lab we're going to speak generally about mainframes and COBOL. Files from a mainframe are usually saved as binary files and sFTPed to some server where DataStage can access them. The binary files alone are not enough for DataStage to read the contents. A COBOL playbook is required to translate the data from binary to ascii. Both files are available here: <https://github.com/IBM/datastage-standalone-workshop/tree/master/data/mainframe>.
 
-* XML
-* JSON
-
-> For more info check out the [REST API](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.ds.fd.doc/topics/rest_api.html) documentation.
-
-In this lab we'll learn how to call a JSON endpoint and pipe those results to a file using DataStage.
 
 This lab consists of the following steps:
 
@@ -20,11 +14,7 @@ This lab consists of the following steps:
 
 ## About the data
 
-> To keep things simple in this lab we're going to speak generally about mainframes and COBOL.
-
-Files from a mainframe are usually saved as binary files and sFTPed to some server where DataStage can access them. The binary files alone are not enough for DataStage to read the contents. A COBOL playbook is required to translate the data from binary to ascii. Both files are available here: <https://github.com/IBM/datastage-standalone-workshop/tree/master/data/mainframe>.
-
-The example binary data should be downloaded to the server. Switch to the server and run
+The example binary data should be downloaded to the server. Switch to the server and run:
 
 ```bash
 cd /opt/IBM/InformationServer/Server/Projects/dstage1
