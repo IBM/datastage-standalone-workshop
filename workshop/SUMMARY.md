@@ -7,12 +7,12 @@
 ### Getting Started
 
 * [Lab: Environment setup](lab-skytap/README.md)
-* [Lab: Intro to DataStage](lab-file/README.md)
-* [Lab: Create rules to analyze data](lab-igc/README.md)
-* [Lab: DataStage with database connections](lab-db2/README.md)
-* [Lab: Analyze data across data sets](lab-multi-dbs/README.md)
-* [Lab: Read JSON from a REST call](lab-rest/README.md)
-* [Lab: Configure a Git server](lab-git/README.md)
+* [Lab: DataStage: Read and write to file](lab-file/README.md)
+* [Lab: DataStage: Read from a database (Db2 on IBM Cloud)](lab-db2/README.md)
+* [Lab: DataStage: Read and analyze data from multiple tables](lab-multi-dbs/README.md)
+* [Lab: DataStage: Read JSON from a REST call](lab-rest/README.md)
+* [Lab: IGC: Create custom rules for data analysis](lab-igc/README.md)
+* [Lab: DataStage: Configure a Git server (BitBucket)](lab-git/README.md)
 
 ### Resources
 
