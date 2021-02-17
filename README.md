@@ -2,8 +2,4 @@
 
 This is the source repository for a workshop about DataStage. To view it online, go to:
 
-<https://ibm-developer.gitbook.io/datastage-standalone-workshop/>
-
-OR
-
 <https://ibm.github.io/datastage-standalone-workshop/>
