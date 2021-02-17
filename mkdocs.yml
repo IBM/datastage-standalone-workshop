@@ -14,13 +14,13 @@ nav:
     - About the workshop: README.md
   - Workshop:
     - Access the environment: lab-skytap/README.md
-    - DataStage - Read and write to file (CSV): lab-file/README.md
-    - DataStage - Read from a database (Db2 on IBM Cloud): lab-db2/README.md
-    - DataStage - Read and analyze data from multiple tables: lab-multi-dbs/README.md
-    - DataStage - Read JSON from a REST call: lab-rest/README.md
-    - DataStage - Import COBOL copybook and read EBCIDIC data: lab-mainframe/README.md
-    - DataStage - Configure a Git server (BitBucket): lab-git/README.md
-    - IGC - Create custom rules for data analysis: lab-igc/README.md
+    - Read and write to file (CSV): lab-file/README.md
+    - Read from a database (Db2 on IBM Cloud): lab-db2/README.md
+    - Read and analyze data from multiple tables: lab-multi-dbs/README.md
+    - Read JSON from a REST call: lab-rest/README.md
+    - Import COBOL copybook and read EBCIDIC data: lab-mainframe/README.md
+    - Configure a Git server (BitBucket): lab-git/README.md
+    - Create custom rules for data analysis: lab-igc/README.md
   - References:
     - Additional resources: resources/README.md
   - Instructors:
@@ -40,8 +40,9 @@ theme:
   icon:
     logo: material/library
   features:
-    - navigation.tabs
-    #- navigation.instant
+    #- navigation.tabs
+    - navigation.instant
+    - navigation.expand
   palette:
     scheme: default
     primary: blue
